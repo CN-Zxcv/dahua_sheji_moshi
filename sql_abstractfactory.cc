@@ -30,6 +30,7 @@ class SqlServerUserAPI: public UserAPI
 		User getUser(int id)
 		{
 			cout << "sql user select" << endl;
+			return User();
 		}
 };
 class AccessServerUserAPI: public UserAPI
@@ -42,12 +43,16 @@ class AccessServerUserAPI: public UserAPI
 		User getUser(int id)
 		{
 			cout << "access user select" << endl;
+			return User();
 		}
 };
 
 class Department
 {
-	
+	public:
+		string name;
+	private:
+		int id;
 };
 
 class DepartmentAPI
@@ -67,6 +72,7 @@ class SqlServerDepartmentAPI: public DepartmentAPI
 		Department getDepartment(int id)
 		{
 			cout << "sql department select" << endl;
+			return Department();
 		}
 };
 class AccessServerDepartmentAPI: public DepartmentAPI
@@ -79,6 +85,7 @@ class AccessServerDepartmentAPI: public DepartmentAPI
 		Department getDepartment(int id)
 		{
 			cout << "access department select" << endl;
+			return Department();
 		}
 };
 
